@@ -1,0 +1,100 @@
+/*
+file created by Erfan Moharramkhani, 20 NOV 2020
+ */
+
+@font-face {
+    font-family: IRANSansWeb;
+    src: url("fonts/IRANSansWeb(FaNum).woff");
+}
+body{
+    font-family: IRANSansWeb;
+    background-color: azure;
+}
+
+input {
+    font-family: IRANSansWeb;
+}
+
+.main-form{
+    background-color: cornsilk;
+    width: 33%;
+    margin: 0 auto;
+}
+
+.main-form label:not([for="single"]):not([for="married"]){
+    width: 160px;
+    display: inline-block;
+    padding: 15px;
+}
+
+.main-form input:not([type="radio"]):not([type="checkbox"]), .main-form textarea, .main-form select{
+    width: 240px;
+    height: 30px;
+    margin-top: 15px;
+    outline: none;
+    font-family: IRANSansWeb;
+    resize: vertical;
+}
+.main-form input:focus {
+    border: darkorange 1px solid;
+    border-radius: 1px;
+}
+.main-form input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+}
+.birth-field{
+    width: 66px !important;
+    display: inline-block;
+    margin: 0 !important;
+}
+#phone{
+    width: 220px;
+}
+#phonePrefix{
+    width: 20px;
+}
+
+
+.valid{
+    border: lightgreen 2px solid;
+    border-radius: 4px;
+}
+.invalid{
+    border: red 2px solid;
+    border-radius: 4px;
+}
+/* mobile device */
+
+@media (max-width: 600px) {
+    .main-form{
+        width: 90%;
+        padding: 0 10px 0 10px;
+    }
+
+    .main-form label{
+        width: 200px;
+    }
+
+    .main-form input:not([type="radio"]):not([type="checkbox"]), .main-form textarea, .main-form select{
+        width: 230px;
+    }
+    #phone{
+        width: 210px;
+    }
+    .birth-field{
+        width: 60px !important;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 601px) {
+    .main-form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1001px) {
+    .main-form{
+        width: 60%;
+    }
+}
