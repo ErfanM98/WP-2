@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>دریافت اطلاعات</title>
     <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
@@ -63,15 +64,15 @@
     <br>
 
     <label >تاریخ تولد</label>
-    <input id="birthday" type="text" maxlength="10" placeholder="روز" class="birth-field">
+    <input id="birthday" type="number" maxlength="10" placeholder="روز" class="birth-field">
     <span>/</span>
-    <input id="birthmonth" type="text" maxlength="10" placeholder="ماه" class="birth-field">
+    <input id="birthmonth" type="number" maxlength="10" placeholder="ماه" class="birth-field">
     <span>/</span>
-    <input id="birthyear" type="text" maxlength="10" placeholder="سال" class="birth-field">
+    <input id="birthyear" type="number" maxlength="10" placeholder="سال" class="birth-field">
     <br>
 
-    <label>وضعیت تأهل</label>
-    <div id="marital" style="display: inline">
+    <label for="marital">وضعیت تأهل</label>
+    <div id="marital" style="display: inline; margin-top: 2px;">
     <label for="single">مجرد</label>
     <input type="radio" name="marital" id="single">
     <label for="married">متأهل</label>

@@ -1,7 +1,6 @@
 /*
 file created by Erfan Moharramkhani, 20 NOV 2020
  */
-
 @font-face {
     font-family: IRANSansWeb;
     src: url("fonts/IRANSansWeb(FaNum).woff");
@@ -10,23 +9,19 @@ body{
     font-family: IRANSansWeb;
     background-color: azure;
 }
-
 input {
     font-family: IRANSansWeb;
 }
-
 .main-form{
     background-color: cornsilk;
     width: 33%;
     margin: 0 auto;
 }
-
 .main-form label:not([for="single"]):not([for="married"]){
     width: 160px;
     display: inline-block;
     padding: 15px;
 }
-
 .main-form input:not([type="radio"]):not([type="checkbox"]), .main-form textarea, .main-form select{
     width: 240px;
     height: 30px;
@@ -34,6 +29,11 @@ input {
     outline: none;
     font-family: IRANSansWeb;
     resize: vertical;
+    font-size: 1em;
+}
+
+#address{
+    height: 45px;
 }
 .main-form input:focus {
     border: darkorange 1px solid;
@@ -42,9 +42,20 @@ input {
 .main-form input[type="submit"]{
     display: block;
     margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.1em !important;
+    background-color: #6495ed;
+    border: 0px;
+    border-radius: 10px;
+    color: black;
+    -webkit-appearance: none; /* disable native styling in ios devices */
+}
+.main-form input[type="submit"]:hover{
+    box-shadow: 0 6px 20px 0 #6495ed;
+    cursor: pointer;
 }
 .birth-field{
-    width: 66px !important;
+    width: 65px !important;
     display: inline-block;
     margin: 0 !important;
 }
@@ -54,7 +65,6 @@ input {
 #phonePrefix{
     width: 20px;
 }
-
 
 .valid{
     border: lightgreen 2px solid;
@@ -72,24 +82,29 @@ input {
         padding: 0 10px 0 10px;
     }
 
-    .main-form label{
-        width: 200px;
+    .main-form label:not([for="single"]):not([for="married"]){
+        width: 130px;
+        font-size: 1em;
+        padding: 0;
+    }
+    .main-form label[for="marital"]{
+        padding-top: 10px !important;
     }
 
     .main-form input:not([type="radio"]):not([type="checkbox"]), .main-form textarea, .main-form select{
-        width: 230px;
+        width: 185px;
     }
     #phone{
-        width: 210px;
+        width: 185px;
     }
     .birth-field{
-        width: 60px !important;
+        width: 35px !important;
     }
 }
 
 @media (max-width: 1000px) and (min-width: 601px) {
     .main-form{
-        width: 70%;
+        width: 75%;
     }
 }
 
