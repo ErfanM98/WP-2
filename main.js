@@ -34,8 +34,8 @@ function check_nationoal_code(code)
     for(var i=0;i<9;i++)
         s+=parseInt(code.substr(i,1))*(10-i);
     s=s%11;
+    var c = parseInt(code)%10;
     return (s<2 && c==s) || (s>=2 && c==(11-s));
-    return true;
 }
 
 
@@ -55,7 +55,9 @@ function is_full_name_valid(){
 function is_natinoal_code_valid(){
     let national_code = document.getElementById("national_code").value;
     return national_code.length == 10 &&
-        !( new RegExp("[^\s0-9]").test(national_code));
+        !( new RegExp("[^\s0-9]").test(national_code)) &&
+        check_nationoal_code(national_code)
+        ;
 }
 function is_email_valid(){
     let email = document.getElementById("email").value;
