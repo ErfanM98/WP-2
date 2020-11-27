@@ -248,8 +248,3 @@ function validate(){
     return error_message == "";
 
 }
-
-document.addEventListener("DOMContentLoaded" , function () {
-    // in this place, whole document has been loaded
-
-});
