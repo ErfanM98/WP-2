@@ -53,7 +53,7 @@ function is_full_name_valid(){
     return full_name.length >= 3 && full_name.length <= 150 && is_english_letters(full_name.replaceAll(' ' , ''));
 }
 function is_natinoal_code_valid(){
-    let national_code = document.getElementById("national_code").value;
+    let national_code = document.getElementById("national_code").value.split("-").join("");
     return national_code.length == 10 &&
         !( new RegExp("[^\s0-9]").test(national_code)) &&
         check_nationoal_code(national_code)
@@ -246,5 +246,22 @@ function validate(){
     document.getElementById("info").innerHTML = (error_message.replaceAll('\n','<br>'));
 
     return error_message == "";
-
 }
+
+document.addEventListener("DOMContentLoaded" , function () {
+    // content is fully loaded
+    var national_code = document.getElementById("national_code");
+    national_code.addEventListener("input" , function () {
+        // with help of https://stackoverflow.com/questions/43647839/how-to-put-dash-after-certain-digit-is-insert
+        //Remove hyphens
+        var input = national_code.value.split("-").join("");
+        console.log(input);
+        input = input.split("").map(function (current,index) {
+            if(index == 3 || index == 9){
+                return "-" + current;
+            }
+            return current;
+        }).join('');
+        national_code.value = input;
+    });
+});
