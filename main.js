@@ -37,8 +37,6 @@ function check_nationoal_code(code)
     var c = parseInt(code)%10;
     return (s<2 && c==s) || (s>=2 && c==(11-s));
 }
-
-
 function is_first_name_valid(){
     let first_name = document.getElementById("firstname").value;
     return first_name.length >= 3 && first_name.length <= 50 && is_persian_letters(first_name);
@@ -141,7 +139,6 @@ function validate(){
         full_name.classList.remove("valid");
         error_message += "نام کامل انگلیسی باید بین ۳ تا ۱۵۰ حرف باشد\n";
     }
-
 
     birth_day = document.getElementById("birthday");
     if(is_birth_day_valid()){
