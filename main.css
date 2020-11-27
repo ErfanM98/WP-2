@@ -6,11 +6,11 @@ file created by Erfan Moharramkhani, 20 NOV 2020
     src: url("fonts/IRANSansWeb(FaNum).woff");
 }
 body{
-    font-family: IRANSansWeb;
+    font-family: IRANSansWeb, Tahoma;
     background-color: azure;
 }
 input {
-    font-family: IRANSansWeb;
+    font-family: IRANSansWeb, Tahoma;
 }
 .main-form{
     background-color: cornsilk;
@@ -45,7 +45,7 @@ input {
     font-weight: bold;
     font-size: 1.1em !important;
     background-color: #6495ed;
-    border: 0px;
+    border: 0;
     border-radius: 10px;
     color: black;
     -webkit-appearance: none; /* disable native styling in ios devices */
@@ -95,7 +95,7 @@ input {
         width: 185px;
     }
     #phone{
-        width: 185px;
+        width: 180px;
     }
     .birth-field{
         width: 35px !important;
